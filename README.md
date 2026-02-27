@@ -1,4 +1,10 @@
-MSCHF DinoSwords X Flappy Bird
-That's the idea I guess.
+# Flappy Bird x Dino Swords Crossover
 
-Status: Making foundation.
+## Completed
+None
+## Active Development
+Base/Foundation of the game | 2/27
+## Back Burner
+Items
+## Future Plans
+Graphics
