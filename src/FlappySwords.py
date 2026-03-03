@@ -1,4 +1,4 @@
-#alex zheng
+#Alex Zheng
 
 # inspired by the games flappy bird and dino swords
 
@@ -50,9 +50,8 @@ def draw_pipe(surface, x, height):
 def main():
 	pygame.init()
 	screen = pygame.display.set_mode((display_width, display_height))
-	pygame.display.set_caption('flappyswords')
-
-	clock = pygame.time.clock()
+	pygame.display.set_caption('FlappySwords')
+	Clock = pygame.time.Clock()
 	global pipe_x
 
 	running = True
@@ -71,7 +70,7 @@ def main():
 		pygame.draw.rect(screen, groundcolor, (0, display_height - ground_height, display_width, ground_height))
 
 		pygame.display.flip()
-		clock.tick(60)
+		Clock.tick(60)
 
 	pygame.quit()
 	sys.exit()
