@@ -1,8 +1,8 @@
 # Flappy Bird x Dino Swords Crossover
 Requires Pygame
-### Note
+### Notes
 I have been working on my own so I probably won't update the github that often.
-
+3/10: Used AI to optimize code since it was using a LOT of cpu.
 ## Completed
 None
 ## Active Development
