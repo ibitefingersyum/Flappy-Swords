@@ -1,4 +1,4 @@
-# Flappy Bird x Dino Swords Crossover
+# Flappy Bird x Dino Swords
 Requires Pygame
 ### Notes
 I have been working on my own so I probably won't update the github that often.
