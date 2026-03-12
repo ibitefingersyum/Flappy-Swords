@@ -1,9 +1,13 @@
-# Alex Zheng
-# inspired by flappy bird and dino swords
-
 import pygame
 import sys
 import random
+
+# Alex Zheng
+# inspired by flappy bird and dino swords
+
+# testing
+collision_enabled = True #True default
+
 
 # display
 display_width = 600
@@ -190,10 +194,11 @@ def main():
             player_y += player_velocity
 
             # collision
-            player_rect = pygame.Rect(player_x, player_y, player_size, player_size)
-            ground_y = display_height - ground_height
-            if check_collision(player_rect, pipes, ground_y):
-                paused = True
+            if collision_enabled:
+                player_rect = pygame.Rect(player_x, player_y, player_size, player_size)
+                ground_y = display_height - ground_height
+                if check_collision(player_rect, pipes, ground_y):
+                    paused = True
 
             # scoring
             for pipe in pipes:
