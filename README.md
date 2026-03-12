@@ -22,3 +22,6 @@ Graphics
 ## Known Issues
 Frame drops, application slows at around the score of 8?? 
 // Pipes are deleted once they're off the screen, only the pipes move horizontally and the player moves vertically. not a lot of parts, not sure why.
+
+## Fixed
+Inability to close the game
