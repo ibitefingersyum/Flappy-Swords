@@ -3,7 +3,7 @@ Requires Pygame
 ### Notes
 I have been working on my own so I probably won't update the github that often.
 
-3/10: Used AI to optimize code since it was using a LOT of cpu. (decreased usage by ~1/3)
+3/10: Used AI to optimize code since it was using a LOT of resources. (decreased usage by ~1/3)
 
 ## Completed
 Player
