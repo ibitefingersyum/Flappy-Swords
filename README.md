@@ -20,8 +20,8 @@ Base/Foundation of the game |Logged: 2/27, 2/29, 3/3, 3/5, 3/10, 3/12
 Graphics
 
 ## Known Issues
-Frame drops, application slows at around the score of 8?? 
-// Pipes are deleted once they're off the screen, only the pipes move horizontally and the player moves vertically. not a lot of parts, not sure why.
+pipe Collision Toggle are one with the ground and ceiling
+// This would allow players if they had a weapon, to go under the map and get points forever without doing anything.
 
 ## Fixed
 Inability to close the game
