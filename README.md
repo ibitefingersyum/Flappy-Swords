@@ -18,3 +18,7 @@ Base/Foundation of the game |Logged: 2/27, 2/29, 3/3, 3/5, 3/10, 3/12
 - Interface
 ## Future Plans
 Graphics
+
+## Known Issues
+Frame drops, application slows at around the score of 8?? 
+// Pipes are deleted once they're off the screen, only the pipes move horizontally and the player moves vertically. not a lot of parts, not sure why.
