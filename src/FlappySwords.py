@@ -35,7 +35,7 @@ pipes = [
 # player
 player_size = 20
 player_x = 50
-player_y = display_height // 2
+player_y = display_height // 3
 player_velocity = 0
 gravity = 0.2
 jump_force = -4.5
