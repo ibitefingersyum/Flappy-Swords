@@ -10,7 +10,7 @@ Player
 Base Flappy Bird
 
 ## Active Development
-Base/Foundation of the game |Logged: 2/27, 2/29, 3/3, 3/5, 3/10, 3/12
+Base/Foundation of the game |Logged: 2/27, 2/29, 3/3, 3/5, 3/10, 3/12, 3/17
 - Weapons
 - Collision Toggling
 - Not phasing through the floor
