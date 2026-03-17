@@ -5,8 +5,8 @@ import random
 # Alex Zheng
 # inspired by flappy bird and dino swords
 
-# testing
-collision_enabled = True #True default
+# testing / debug
+collision_enabled = False #True default
 
 
 # display
@@ -85,56 +85,60 @@ def draw_pipe(surface, x, height):
         )
 
 
-def check_collision(player_rect, pipes, ground_y):
-    # ground
+def check_collision(player_rect, pipes, ground_y, check_pipes=True):
+    # ground (always checked)
     if player_rect.bottom >= ground_y:
         return True
 
-    # ceiling
+    # ceiling (always checked)
     if player_rect.top <= 0:
         return True
 
-    # pipes
-    for pipe in pipes:
-        # top pipe
-        top_pipe_rect = pygame.Rect(pipe[0], 0, pipe_width, pipe[1])
-        if player_rect.colliderect(top_pipe_rect):
-            return True
-
-        # top pipe part
-        top_part_y = pipe[1] - pipe_part
-        if top_part_y + pipe_part_height > 0:
-            top_part_y_clamped = max(0, top_part_y)
-            top_part_height_visible = pipe_part_height - max(0, -top_part_y)
-            if top_part_height_visible > 0:
-                top_part_x = pipe[0] - pipe_part // 2
-                top_part_rect = pygame.Rect(
-                    top_part_x,
-                    top_part_y_clamped,
-                    pipe_width + pipe_part,
-                    top_part_height_visible,
-                )
-                if player_rect.colliderect(top_part_rect):
-                    return True
-
-        # bottom pipe
-        bottom_y = pipe[1] + pipe_gap
-        bottom_height = display_height - ground_height - bottom_y
-        if bottom_height > 0:
-            bottom_pipe_rect = pygame.Rect(pipe[0], bottom_y, pipe_width, bottom_height)
-            if player_rect.colliderect(bottom_pipe_rect):
+    # pipes (optional)
+    if check_pipes:
+        for pipe in pipes:
+            # top pipe
+            top_pipe_rect = pygame.Rect(pipe[0], 0, pipe_width, pipe[1])
+            if player_rect.colliderect(top_pipe_rect):
                 return True
 
-        # bottom pipe part
-        bottom_part_y = bottom_y - pipe_part
-        bottom_part_x = pipe[0] - pipe_part // 2
-        bottom_part_rect = pygame.Rect(
-            bottom_part_x, bottom_part_y, pipe_width + pipe_part, pipe_part_height
-        )
-        if player_rect.colliderect(bottom_part_rect):
-            return True
+            # top pipe part
+            top_part_y = pipe[1] - pipe_part
+            if top_part_y + pipe_part_height > 0:
+                top_part_y_clamped = max(0, top_part_y)
+                top_part_height_visible = pipe_part_height - max(0, -top_part_y)
+                if top_part_height_visible > 0:
+                    top_part_x = pipe[0] - pipe_part // 2
+                    top_part_rect = pygame.Rect(
+                        top_part_x,
+                        top_part_y_clamped,
+                        pipe_width + pipe_part,
+                        top_part_height_visible,
+                    )
+                    if player_rect.colliderect(top_part_rect):
+                        return True
+
+            # bottom pipe
+            bottom_y = pipe[1] + pipe_gap
+            bottom_height = display_height - ground_height - bottom_y
+            if bottom_height > 0:
+                bottom_pipe_rect = pygame.Rect(
+                    pipe[0], bottom_y, pipe_width, bottom_height
+                )
+                if player_rect.colliderect(bottom_pipe_rect):
+                    return True
+
+            # bottom pipe part
+            bottom_part_y = bottom_y - pipe_part
+            bottom_part_x = pipe[0] - pipe_part // 2
+            bottom_part_rect = pygame.Rect(
+                bottom_part_x, bottom_part_y, pipe_width + pipe_part, pipe_part_height
+            )
+            if player_rect.colliderect(bottom_part_rect):
+                return True
 
     return False
+
 
 
 def draw_score(surface, score):
@@ -194,11 +198,11 @@ def main():
             player_y += player_velocity
 
             # collision
-            if collision_enabled:
-                player_rect = pygame.Rect(player_x, player_y, player_size, player_size)
-                ground_y = display_height - ground_height
-                if check_collision(player_rect, pipes, ground_y):
-                    paused = True
+            player_rect = pygame.Rect(player_x, player_y, player_size, player_size)
+            ground_y = display_height - ground_height
+
+            if check_collision(player_rect, pipes, ground_y, collision_enabled):
+                paused = True
 
             # scoring
             for pipe in pipes:
