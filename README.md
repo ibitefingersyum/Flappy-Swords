@@ -8,14 +8,13 @@ I have been working on my own so I probably won't update the github that often.
 ## Completed
 Player
 Base Flappy Bird
+Seperation of Floor and Pipe Collision
 
 ## Active Development
 Base/Foundation of the game |Logged: 2/27, 2/29, 3/3, 3/5, 3/10, 3/12, 3/17
 - Weapons
 - Collision Toggling
-- Not phasing through the floor
-- Seperation of Floor and Pipe Collision
-  
+
 ## Back Burner
 - Interface
 ## Future Plans
@@ -27,3 +26,4 @@ pipe Collision Toggle are one with the ground and ceiling
 
 ## Fixed
 Inability to close the game
+phasing through the floor
