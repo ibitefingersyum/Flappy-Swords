@@ -9,20 +9,19 @@ I have been working on my own so I probably won't update the github that often.
 Player
 Base Flappy Bird
 Seperation of Floor and Pipe Collision
+Collision Toggling
 
 ## Active Development
 Base/Foundation of the game |Logged: 2/27, 2/29, 3/3, 3/5, 3/10, 3/12, 3/17, 3/19
 - Weapons
-- Collision Toggling
-
-## Back Burner
 - Interface
+## Back Burner
+
+
 ## Future Plans
 Graphics
 
 ## Known Issues
-pipe Collision Toggle are one with the ground and ceiling
-// This would allow players if they had a weapon, to go under the map and get points forever without doing anything.
 
 ## Fixed
 Inability to close the game
