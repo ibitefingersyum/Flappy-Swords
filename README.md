@@ -10,11 +10,15 @@ Player
 Base Flappy Bird
 Seperation of Floor and Pipe Collision
 Collision Toggling
+Melee Class
 
 ## Active Development
 Base/Foundation of the game |Logged: 2/27, 2/29, 3/3, 3/5, 3/10, 3/12, 3/17, 3/19, 3/26
 - Weapons
 - Interface
+Special Class
+Projectile Class
+
 ## Back Burner
 Start screen
 
@@ -22,6 +26,7 @@ Start screen
 Graphics
 
 ## Known Issues
+Items not kept after obtainment of a new one
 
 ## Fixed
 Inability to close the game
