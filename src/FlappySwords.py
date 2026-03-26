@@ -2,6 +2,12 @@ import pygame
 import sys
 import random
 
+# Alex Zheng Flappy Swords
+# combined into 1 file
+#keybinds for now: space = jump, s = sword, q = gravity inversion
+# Supposed to be weapons for all keys but only 2 in the moment.
+#Weapons obtained 
+
 # display
 display_width = 600
 display_height = 800
@@ -19,7 +25,7 @@ pipe_part_height = 20
 pipe_color = (0, 180, 0)
 pipe_part_color = (0, 150, 0)
 pipe_gap = 125
-
+#AZ
 pipes = [
     [display_width, random.randint(50, display_height - ground_height - pipe_gap - 20), False, False]
 ]
@@ -78,7 +84,7 @@ def draw_pipe(surface, x, height, disabled):
 
     surface.blit(pipe_surface, (0, 0))
 
-
+#AZ
 def check_collision(player_rect, pipes, ground_y):
     if player_rect.bottom >= ground_y or player_rect.top <= 0:
         return True
@@ -100,19 +106,19 @@ def check_collision(player_rect, pipes, ground_y):
 
     return False
 
-
+#AZ
 def draw_score(surface, score):
     font = pygame.font.Font(None, 74)
     surface.blit(font.render(str(score), True, (255, 255, 255)), (10, 10))
 
-
+#AZ
 def draw_ammo(surface, weapon):
     if not weapon:
         return
     font = pygame.font.Font(None, 36)
     surface.blit(font.render(f"{weapon['type']} Ammo: {weapon['ammo']}", True, (255,255,255)), (10, 80))
 
-
+# Alex Zheng
 def main():
     pygame.init()
     screen = pygame.display.set_mode((display_width, display_height))
