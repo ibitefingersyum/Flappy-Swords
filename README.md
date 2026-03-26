@@ -27,7 +27,7 @@ Graphics
 
 ## Known Issues
 Items not kept after obtainment of a new one
-
+Ammo is used if you click a multiple times without having any actual effect on Melee weapons.
 ## Fixed
 Inability to close the game
 phasing through the floor
