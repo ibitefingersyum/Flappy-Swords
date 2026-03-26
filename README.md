@@ -16,8 +16,8 @@ Melee Class
 Base/Foundation of the game |Logged: 2/27, 2/29, 3/3, 3/5, 3/10, 3/12, 3/17, 3/19, 3/26
 - Weapons
 - Interface
-Special Class
-Projectile Class
+- Special Class
+- Projectile Class
 
 ## Back Burner
 Start screen
