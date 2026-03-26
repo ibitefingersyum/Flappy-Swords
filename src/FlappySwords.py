@@ -6,7 +6,7 @@ import random
 # combined into 1 file
 #keybinds for now: space = jump, s = sword, q = gravity inversion
 # Supposed to be weapons for all keys but only 2 in the moment.
-#Weapons obtained 
+#Weapons obtained every few pipes depending on what it's set to.
 
 # display
 display_width = 600
