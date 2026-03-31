@@ -1,3 +1,5 @@
+# NO LONGER BEING MADE | BROKEN VERSION
+
 # Flappy Bird x Dino Swords
 Requires Pygame
 ### Notes
